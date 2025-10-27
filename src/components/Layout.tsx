@@ -8,7 +8,6 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 
   const navigation = [
     { name: "Home", href: "/" },
-    { name: "Portfolio", href: "https://drive.google.com/drive/folders/1yqq3FRGPahDqWdPqASDyPcm41mWuU6C8?usp=drive_link", external: true },
     { name: "Work", href: "/work" },
     { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" },
@@ -27,29 +26,17 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
-              {navigation.map((item) =>
-                item.external ? (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-foreground hover:text-primary transition-colors"
-                  >
-                    {item.name}
-                  </a>
-                ) : (
-                  <Link
-                    key={item.name}
-                    to={item.href}
-                    className={`text-foreground hover:text-primary transition-colors ${
-                      location.pathname === item.href ? "text-primary font-semibold" : ""
-                    }`}
-                  >
-                    {item.name}
-                  </Link>
-                )
-              )}
+              {navigation.map((item) => (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className={`text-foreground hover:text-primary transition-colors ${
+                    location.pathname === item.href ? "text-primary font-semibold" : ""
+                  }`}
+                >
+                  {item.name}
+                </Link>
+              ))}
             </div>
 
             {/* Mobile menu button */}
@@ -65,31 +52,18 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           {mobileMenuOpen && (
             <div className="md:hidden py-4 animate-fade-in">
               <div className="flex flex-col space-y-4">
-                {navigation.map((item) =>
-                  item.external ? (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-foreground hover:text-primary transition-colors px-2"
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      {item.name}
-                    </a>
-                  ) : (
-                    <Link
-                      key={item.name}
-                      to={item.href}
-                      className={`text-foreground hover:text-primary transition-colors px-2 ${
-                        location.pathname === item.href ? "text-primary font-semibold" : ""
-                      }`}
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      {item.name}
-                    </Link>
-                  )
-                )}
+                {navigation.map((item) => (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    className={`text-foreground hover:text-primary transition-colors px-2 ${
+                      location.pathname === item.href ? "text-primary font-semibold" : ""
+                    }`}
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                ))}
               </div>
             </div>
           )}
@@ -114,14 +88,6 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 className="text-muted-foreground hover:text-primary transition-colors text-sm"
               >
                 Email
-              </a>
-              <a
-                href="https://drive.google.com/drive/folders/1yqq3FRGPahDqWdPqASDyPcm41mWuU6C8?usp=drive_link"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-primary transition-colors text-sm"
-              >
-                Portfolio
               </a>
             </div>
           </div>

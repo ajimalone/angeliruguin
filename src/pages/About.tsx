@@ -1,5 +1,7 @@
-import { Code, Palette, Users, Zap, Award, GraduationCap, Briefcase } from "lucide-react";
+import { Code, Palette, Users, Zap, Award, GraduationCap, Briefcase, ExternalLink } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import profilePhoto from "@/assets/profile-photo.jpg";
 
 const About = () => {
   const skills = [
@@ -65,15 +67,19 @@ const About = () => {
           </p>
         </div>
 
-        {/* Bio */}
+        {/* Bio with Photo */}
         <div className="mb-20 animate-fade-up">
           <Card className="border-none shadow-lg">
             <CardContent className="p-8 md:p-12">
-              <div className="flex items-start gap-4 mb-6">
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
-                  <Zap className="w-6 h-6 text-primary" />
+              <div className="flex flex-col md:flex-row items-start gap-8 mb-6">
+                <div className="w-48 h-48 rounded-lg overflow-hidden flex-shrink-0 mx-auto md:mx-0">
+                  <img 
+                    src={profilePhoto} 
+                    alt="Angel Jasmin G. Iruguin - Aji" 
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-                <div>
+                <div className="flex-1">
                   <h2 className="text-2xl font-bold mb-4">Hi, I'm Angel Jasmin G. Iruguin</h2>
                   <div className="space-y-4 text-muted-foreground leading-relaxed">
                     <p>
@@ -97,6 +103,31 @@ const About = () => {
                   </div>
                 </div>
               </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Digital Artworks Section */}
+        <div className="mb-20">
+          <Card className="border-none shadow-lg bg-gradient-to-br from-primary/5 to-secondary/5">
+            <CardContent className="p-8 md:p-12 text-center">
+              <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Palette className="w-8 h-8 text-primary" />
+              </div>
+              <h2 className="text-2xl md:text-3xl font-bold mb-4">Digital Artworks & Portfolio</h2>
+              <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+                Explore my collection of digital artworks, design projects, and creative works showcasing my journey in multimedia design and branding.
+              </p>
+              <a 
+                href="https://drive.google.com/drive/folders/1yqq3FRGPahDqWdPqASDyPcm41mWuU6C8?usp=drive_link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button size="lg" className="gap-2">
+                  View Digital Artworks
+                  <ExternalLink className="w-4 h-4" />
+                </Button>
+              </a>
             </CardContent>
           </Card>
         </div>

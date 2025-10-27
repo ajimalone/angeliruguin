@@ -41,15 +41,6 @@ const Work = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 animate-fade-up">
           {filteredProjects.map((project: Project) => (
             <Card key={project.id} className="overflow-hidden hover:shadow-lg transition-shadow">
-              <CardHeader className="p-0">
-                <div className="aspect-video bg-muted flex items-center justify-center">
-                  <img
-                    src={project.thumbnail}
-                    alt={project.title}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </CardHeader>
               <CardContent className="p-6">
                 <div className="flex items-center gap-2 mb-2">
                   <span className="text-xs font-medium text-secondary">{project.category}</span>
