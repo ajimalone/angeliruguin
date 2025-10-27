@@ -22,7 +22,7 @@ const Home = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/work">
               <Button variant="hero" size="lg">
-                View My Work <ArrowRight className="ml-2" />
+                My Projects <ArrowRight className="ml-2" />
               </Button>
             </Link>
             <Link to="/contact">

@@ -61,10 +61,10 @@ const Contact = () => {
               </CardHeader>
               <CardContent>
                 <a
-                  href="mailto:angeljasmingamayon.iruguin@gmail.com"
+                  href="mailto:angel.iruguin17@gmail.com"
                   className="text-sm text-muted-foreground hover:text-primary transition-colors break-all"
                 >
-                  angeljasmingamayon.iruguin@gmail.com
+                  angel.iruguin17@gmail.com
                 </a>
               </CardContent>
             </Card>

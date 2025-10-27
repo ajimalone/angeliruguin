@@ -84,7 +84,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             </div>
             <div className="flex space-x-6">
               <a
-                href="mailto:angeljasmingamayon.iruguin@gmail.com"
+                href="mailto:angel.iruguin17@gmail.com"
                 className="text-muted-foreground hover:text-primary transition-colors text-sm"
               >
                 Email
