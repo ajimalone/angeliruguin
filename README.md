@@ -1,4 +1,4 @@
-# 🌸 Angel Iruguin — Portfolio Website
+# 🦈 Angel Iruguin — Portfolio Website
 
 Welcome to my personal website!  
 This site was built with **Lovable** and hosted for free on **GitHub Pages**.
